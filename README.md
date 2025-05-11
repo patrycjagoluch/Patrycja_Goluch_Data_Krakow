@@ -1,3 +1,5 @@
 # Patrycja_Goluch_Data_Krakow
 
-[Kliknij tutaj, aby zobaczyć plik](Patrycja_Goluch.csv)
+[Patrycja_Goluch.csv](Patrycja_Goluch.csv)
+[Patrycja_Goluch_analysis](Patrycja_Goluch_analysis.pdf)
+[Patrycja_Goluch_research](Patrycja_Goluch_research.pdf)
