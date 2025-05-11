@@ -1,0 +1,17 @@
+SHOW databases;
+USE droptime;
+SHOW TABLES;
+SELECT * FROM orders LIMIT 10;
+SELECT * FROM products LIMIT 10;
+SELECT * FROM orders_products LIMIT 10;
+SELECT * FROM route_segments LIMIT 10;
+
+SELECT p.product_id as productId, SUM(p.weight * op.quantity) as totalWeight
+FROM products p
+INNER JOIN orders_products op ON p.product_id = op.product_id
+INNER JOIN orders o ON o.order_id  = op.order_id 
+INNER JOIN route_segments r ON r.order_id  = o.order_id
+WHERE o.customer_id = 32 AND r.segment_end_time = '2024-02-13 %' AND r.segment_type ='STOP'
+GROUP BY p.product_id
+ORDER BY totalWeight ASC;
+
